@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>หลักสูตร AI — NexTalent AI</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<svg class="custom-cursor" id="customCursor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cursorGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a78bfa" />
+      <stop offset="100%" stop-color="#22d3ee" />
+    </linearGradient>
+  </defs>
+  <path d="M4 2 L4 20 L9 15.5 L12.5 22 L15 20.5 L11.5 14 L18 14 Z"
+        fill="url(#cursorGradient)"
+        stroke="#050508"
+        stroke-width="1" />
+</svg>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.svg" alt="NexTalent AI Logo" class="logo-img" />
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">หน้าหลัก</a></li>
+        <li><a href="index.html#jobs">ตำแหน่งงาน</a></li>
+        <li><a href="courses.html" class="active">หลักสูตร</a></li>
+        <li><a href="about.html">เกี่ยวกับเรา</a></li>
+        <li><a href="index.html#register" class="btn-nav">สมัครงาน</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="เมนู">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="hero-bg">
+      <div class="grid-overlay"></div>
+      <div class="glow glow-1"></div>
+    </div>
+    <div class="page-hero-content">
+      <span class="section-tag">AI Training &amp; Certification</span>
+      <h1>หลักสูตรพัฒนาทักษะ 
+        <span class="gradient-text">ปัญญาประดิษฐ์</span>
+      </h1>
+      <p>เรียนรู้และรับ Digital Certificate เพื่อยกระดับตัวเองสู่ตลาดแรงงาน AI ยุคใหม่<br/>อิงกรอบสมรรถนะ AI 4 มิติ จาก AI Passport Thailand</p>
+    </div>
+  </section>
+
+  <!-- ===== COMPETENCY FRAMEWORK ===== -->
+  <section class="framework-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">AI Competency Framework</span>
+        <h2>กรอบสมรรถนะปัญญาประดิษฐ์ 4 มิติ</h2>
+      </div>
+      <div class="framework-grid">
+        <div class="framework-card fc-1">
+          <div class="fc-icon">🧠</div>
+          <h4>Human-Centered Mindset</h4>
+          <p>ทัศนคติและจริยธรรมในการใช้ AI เพื่อมนุษย์</p>
+        </div>
+        <div class="framework-card fc-2">
+          <div class="fc-icon">⚖️</div>
+          <h4>Ethics of AI</h4>
+          <p>จริยธรรม ความเป็นธรรม และความรับผิดชอบ</p>
+        </div>
+        <div class="framework-card fc-3">
+          <div class="fc-icon">⚙️</div>
+          <h4>Techniques &amp; Applications</h4>
+          <p>เทคนิคและการประยุกต์ใช้ AI ในงานจริง</p>
+        </div>
+        <div class="framework-card fc-4">
+          <div class="fc-icon">🏗️</div>
+          <h4>AI System Design</h4>
+          <p>การออกแบบและพัฒนาระบบ AI อย่างมืออาชีพ</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COURSES GRID ===== -->
+  <section class="courses-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">All Courses</span>
+        <h2>หลักสูตรทั้งหมด</h2>
+        <p>เลือกหลักสูตรที่เหมาะกับระดับทักษะของคุณ</p>
+      </div>
+
+      <div class="courses-filter">
+        <button class="filter-btn active" data-filter="all">ทั้งหมด</button>
+        <button class="filter-btn" data-filter="beginner">Beginner</button>
+        <button class="filter-btn" data-filter="pioneer">Pioneer</button>
+        <button class="filter-btn" data-filter="innovator">Innovator</button>
+      </div>
+
+      <div class="courses-grid">
+
+        <!-- Course 1 -->
+        <div class="course-card" data-level="beginner">
+          <div class="course-banner cb-1">
+            <div class="course-level-badge badge-beginner">🌱 Beginner</div>
+            <div class="course-category">Techniques &amp; Applications</div>
+          </div>
+          <div class="course-body">
+            <h3 class="course-title">Generative AI Foundations &amp; Prompt Engineering Masterclass</h3>
+            <p class="course-desc">เรียนรู้โครงสร้าง Large Language Models (LLM) และเทคนิค Prompt ขั้นสูง Few-Shot Prompting, Chain-of-Thought (CoT) เพื่อสร้างสรรค์เนื้อหาและวิเคราะห์ข้อมูลด้วย AI</p>
+            <div class="course-meta">
+              <span class="course-hours">⏱ 18 ชั่วโมง</span>
+              <span class="course-cert">🏆 Digital Certificate</span>
+            </div>
+            <div class="course-footer">
+              <span class="course-price">4,500 บาท</span>
+              <a href="http://www.ai-passport.com/index.php?ac=course&cat_id=1&course_id=1" target="_blank" class="btn-course">ดูรายละเอียด →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 2 -->
+        <div class="course-card" data-level="beginner">
+          <div class="course-banner cb-2">
+            <div class="course-level-badge badge-beginner">🌱 Beginner</div>
+            <div class="course-category">Human-Centered Mindset</div>
+          </div>
+          <div class="course-body">
+            <h3 class="course-title">Multimodal Generative AI for Business &amp; Creative Content</h3>
+            <p class="course-desc">ประยุกต์ใช้ Multimodal AI สร้างสรรค์สื่อทั้งข้อความ ภาพ เสียง และวิดีโอ เพื่อเพิ่มมูลค่าเชิงธุรกิจและการตลาดดิจิทัล สร้างแคมเปญและ Content อย่างมืออาชีพ</p>
+            <div class="course-meta">
+              <span class="course-hours">⏱ 15 ชั่วโมง</span>
+              <span class="course-cert">🏆 Digital Certificate</span>
+            </div>
+            <div class="course-footer">
+              <span class="course-price">3,900 บาท</span>
+              <a href="http://www.ai-passport.com/index.php?ac=course&cat_id=1&course_id=4" target="_blank" class="btn-course">ดูรายละเอียด →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 3 -->
+        <div class="course-card" data-level="pioneer">
+          <div class="course-banner cb-3">
+            <div class="course-level-badge badge-pioneer">🚀 Pioneer</div>
+            <div class="course-category">Techniques &amp; Applications</div>
+          </div>
+          <div class="course-body">
+            <h3 class="course-title">AI-Powered Business Automation with No-Code Tools</h3>
+            <p class="course-desc">ออกแบบ Workflow อัตโนมัติด้วย Zapier, Make.com และ Power Automate เชื่อมต่อระบบต่างๆ และลดงาน Manual ด้วยพลัง AI</p>
+            <div class="course-meta">
+              <span class="course-hours">⏱ 20 ชั่วโมง</span>
+              <span class="course-cert">🏆 Digital Certificate</span>
+            </div>
+            <div class="course-footer">
+              <span class="course-price">5,500 บาท</span>
+              <a href="http://www.ai-passport.com/" target="_blank" class="btn-course">ดูรายละเอียด →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 4 -->
+        <div class="course-card" data-level="pioneer">
+          <div class="course-banner cb-4">
+            <div class="course-level-badge badge-pioneer">🚀 Pioneer</div>
+            <div class="course-category">Ethics of AI</div>
+          </div>
+          <div class="course-body">
+            <h3 class="course-title">AI Ethics, PDPA Compliance &amp; Responsible AI</h3>
+            <p class="course-desc">ทำความเข้าใจจริยธรรม AI กฎหมาย PDPA และแนวทาง Responsible AI สำหรับองค์กร เพื่อให้การพัฒนา AI เป็นไปอย่างถูกต้องและปลอดภัย</p>
+            <div class="course-meta">
+              <span class="course-hours">⏱ 12 ชั่วโมง</span>
+              <span class="course-cert">🏆 Digital Certificate</span>
+            </div>
+            <div class="course-footer">
+              <span class="course-price">3,200 บาท</span>
+              <a href="http://www.ai-passport.com/" target="_blank" class="btn-course">ดูรายละเอียด →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 5 -->
+        <div class="course-card" data-level="innovator">
+          <div class="course-banner cb-5">
+            <div class="course-level-badge badge-innovator">💡 Innovator</div>
+            <div class="course-category">AI System Design</div>
+          </div>
+          <div class="course-body">
+            <h3 class="course-title">AI System Design &amp; MLOps for Enterprise</h3>
+            <p class="course-desc">ออกแบบสถาปัตยกรรม AI ระดับองค์กร ตั้งแต่ Data Pipeline, Model Training, Deployment จนถึง Monitoring ด้วย MLOps Practices</p>
+            <div class="course-meta">
+              <span class="course-hours">⏱ 30 ชั่วโมง</span>
+              <span class="course-cert">🏆 Digital Certificate</span>
+            </div>
+            <div class="course-footer">
+              <span class="course-price">8,900 บาท</span>
+              <a href="http://www.ai-passport.com/" target="_blank" class="btn-course">ดูรายละเอียด →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 6 -->
+        <div class="course-card" data-level="innovator">
+          <div class="course-banner cb-6">
+            <div class="course-level-badge badge-innovator">💡 Innovator</div>
+            <div class="course-category">AI System Design</div>
+          </div>
+          <div class="course-body">
+            <h3 class="course-title">Building AI Agents &amp; RAG Applications</h3>
+            <p class="course-desc">สร้าง AI Agents อัจฉริยะและพัฒนา RAG (Retrieval-Augmented Generation) Application เชื่อมต่อ LLM กับข้อมูลองค์กรอย่างปลอดภัยและมีประสิทธิภาพ</p>
+            <div class="course-meta">
+              <span class="course-hours">⏱ 25 ชั่วโมง</span>
+              <span class="course-cert">🏆 Digital Certificate</span>
+            </div>
+            <div class="course-footer">
+              <span class="course-price">7,500 บาท</span>
+              <a href="http://www.ai-passport.com/" target="_blank" class="btn-course">ดูรายละเอียด →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <img src="images/logo.svg" alt="NexTalent AI Logo" class="logo-img" />
+          </a>
+          <p>แพลตฟอร์มพัฒนาทักษะและสรรหาบุคลากร AI &amp; Digital สำหรับตลาดแรงงานยุคใหม่</p>
+        </div>
+        <div class="footer-links">
+          <h4>เมนูหลัก</h4>
+          <ul>
+            <li><a href="index.html">หน้าหลัก</a></li>
+            <li><a href="index.html#jobs">ตำแหน่งงาน</a></li>
+            <li><a href="courses.html">หลักสูตรอบรม</a></li>
+            <li><a href="about.html">เกี่ยวกับเรา</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>ติดต่อ</h4>
+          <ul>
+            <li>📍 9/1 ม.5 ต.คลองหนึ่ง อ.คลองหลวง จ.ปทุมธานี 12120</li>
+            <li>📞 0999024265</li>
+            <li>✉️ nattharika.boon@bu.ac.th</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 NexTalent AI. All rights reserved. | พัฒนาโดยนักศึกษา มหาวิทยาลัยกรุงเทพ</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NexTalent AI — งานและทักษะ AI ยุคใหม่</title>
+  <meta name="description" content="แพลตฟอร์มพัฒนาทักษะ AI และสรรหาบุคลากรสายดิจิทัล เชื่อมผู้มีความสามารถกับตำแหน่งงาน AI จากบริษัทชั้นนำ" />
+  <meta property="og:title" content="NexTalent AI — งานและทักษะ AI ยุคใหม่" />
+  <meta property="og:description" content="ประเมินทักษะ AI ของคุณ และค้นหาตำแหน่งงานสาย AI & Digital ที่ใช่" />
+  <meta property="og:image" content="https://nex-talent-ai.vercel.app/images/logo.svg" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+   <div class="page-loader" id="pageLoader">
+  <div class="page-loader-logo">AI</div>
+  <div class="page-loader-bar"></div>
+</div>
+
+<svg class="custom-cursor" id="customCursor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cursorGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a78bfa" />
+      <stop offset="100%" stop-color="#22d3ee" />
+    </linearGradient>
+  </defs>
+  <path d="M4 2 L4 20 L9 15.5 L12.5 22 L15 20.5 L11.5 14 L18 14 Z"
+        fill="url(#cursorGradient)"
+        stroke="#050508"
+        stroke-width="1" />
+</svg>
+
+<div class="cursor-trail" id="cursorTrail"></div>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.svg" alt="NexTalent AI Logo" class="logo-img" />
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">หน้าหลัก</a></li>
+        <li><a href="#jobs">ตำแหน่งงาน</a></li>
+        <li><a href="courses.html">หลักสูตร</a></li>
+        <li><a href="about.html">เกี่ยวกับเรา</a></li>
+        <li><a href="#register" class="btn-nav">สมัครงาน</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="เมนู">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="grid-overlay"></div>
+      <div class="glow glow-1"></div>
+      <div class="glow glow-2"></div>
+      <div class="hero-stars" id="heroStars"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span> เปิดรับสมัครงาน AI &amp; Digital 2026
+      </div>
+      <h1 class="hero-title">
+        ก้าวสู่อนาคต<br/>
+        <span class="gradient-text">ด้วยทักษะ AI</span>
+      </h1>
+      <p class="hero-subtitle">
+        แพลตฟอร์มชั้นนำสำหรับการพัฒนาทักษะปัญญาประดิษฐ์ (Upskill/Reskill)<br/>
+        เชื่อมโยงผู้มีความสามารถสู่ตำแหน่งงานดิจิทัลยุคใหม่
+      </p>
+      <div class="hero-actions">
+        <a href="#jobs" class="btn btn-primary">ดูตำแหน่งงาน</a>
+        <a href="#register" class="btn btn-outline">ลงทะเบียนฟรี</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num" data-target="500">0+</span>
+          <span class="stat-label">ตำแหน่งงาน</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="120">0+</span>
+          <span class="stat-label">บริษัทชั้นนำ</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="30">0+</span>
+          <span class="stat-label">หลักสูตร AI</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="orbit-ring ring-1"></div>
+      <div class="orbit-ring ring-2"></div>
+      <div class="orbit-ring ring-3"></div>
+      <div class="center-orb"><span>AI</span></div>
+      <div class="orbit-dot dot-1"></div>
+      <div class="orbit-dot dot-2"></div>
+      <div class="orbit-dot dot-3"></div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ===== SKILL TIERS ===== -->
+  <section class="tiers-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">AI Skill Tier</span>
+        <h2>ระดับความสามารถของคุณอยู่ในระดับไหน?</h2>
+        <p>ประเมินตัวเองและเลือกเส้นทางพัฒนาที่เหมาะสม</p>
+      </div>
+      <div class="tiers-grid">
+        <div class="tier-card tier-beginner reveal">
+          <div class="tier-icon">🌱</div>
+          <h3>Beginner</h3>
+          <p class="tier-th">ระดับเริ่มต้น</p>
+          <p>เริ่มต้นเรียนรู้ AI พื้นฐาน Prompt Engineering และการใช้งาน Generative AI ในชีวิตประจำวัน</p>
+          <a href="courses.html" class="tier-link">เริ่มเรียน →</a>
+        </div>
+        <div class="tier-card tier-pioneer reveal">
+          <div class="tier-icon">🚀</div>
+          <h3>Pioneer</h3>
+          <p class="tier-th">ระดับผู้บุกเบิก</p>
+          <p>ประยุกต์ใช้ AI ในการทำงาน สร้าง Workflow อัตโนมัติ และพัฒนาทักษะ AI ขั้นสูง</p>
+          <a href="courses.html" class="tier-link">เริ่มเรียน →</a>
+        </div>
+        <div class="tier-card tier-innovator reveal">
+          <div class="tier-icon">💡</div>
+          <h3>Innovator</h3>
+          <p class="tier-th">ระดับผู้สร้างสรรค์สิ่งใหม่</p>
+          <p>ออกแบบระบบ AI สร้างนวัตกรรม และนำ AI มาแก้ปัญหาธุรกิจในระดับองค์กร</p>
+          <a href="courses.html" class="tier-link">เริ่มเรียน →</a>
+        </div>
+      </div>
+        </div>
+    <div class="container">
+      <div class="tiers-cta">
+        <button type="button" class="btn btn-primary" id="startAssessment">
+          🧠 ประเมินระดับความสามารถของฉัน
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ===== JOB VACANCIES ===== -->
+  <section class="jobs-section" id="jobs">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Job Vacancies</span>
+        <h2>ตำแหน่งงาน AI &amp; Digital ที่เปิดรับ</h2>
+        <p>โอกาสงานสายดิจิทัลและ AI จากบริษัทชั้นนำ</p>
+      </div>
+
+      <div class="jobs-filter">
+        <button class="filter-btn active" data-filter="all">ทั้งหมด</button>
+        <button class="filter-btn" data-filter="dev">Web Dev</button>
+        <button class="filter-btn" data-filter="automation">Automation</button>
+        <button class="filter-btn" data-filter="data">Data</button>
+      </div>
+
+      <div class="jobs-grid">
+
+        <!-- Job 1 -->
+        <div class="job-card reveal" data-category="dev">
+          <div class="job-header">
+            <div class="company-logo logo-ni">NI</div>
+            <div class="job-meta">
+              <span class="job-date">15 ส.ค. 2568</span>
+              <span class="job-tag hot">Hot 🔥</span>
+            </div>
+          </div>
+          <button type="button" class="job-title-btn" data-job="job1">
+            <h3 class="job-title">AI-Assisted Web Developer</h3>
+          </button>
+          <p class="job-company">NexGen Innovations Co., Ltd.</p>
+          <p class="job-location">📍 บางนา, กรุงเทพฯ (ใกล้รถไฟฟ้า)</p>
+          <p class="job-desc">พัฒนา Frontend ด้วย HTML5, CSS3, JavaScript พร้อมใช้ AI Coding Tools เพิ่มประสิทธิภาพ สร้าง Responsive UI ระดับมืออาชีพ</p>
+          <div class="job-skills">
+            <span class="skill-tag">HTML5/CSS3</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">GitHub Copilot</span>
+            <span class="skill-tag">Tailwind CSS</span>
+          </div>
+          <div class="job-footer">
+            <span class="job-salary">💰 40,000 – 70,000 บาท/เดือน</span>
+            <a href="#register" class="btn-apply">สมัครงาน</a>
+          </div>
+        </div>
+
+        <!-- Job 2 -->
+        <div class="job-card reveal" data-category="automation">
+          <div class="job-header">
+            <div class="company-logo logo-ss">SS</div>
+            <div class="job-meta">
+              <span class="job-date">15 ส.ค. 2568</span>
+              <span class="job-tag new">New ✨</span>
+            </div>
+          </div>
+          <button type="button" class="job-title-btn" data-job="job2">
+            <h3 class="job-title">Digital &amp; AI Transformation Associate</h3>
+          </button>
+          <p class="job-company">Siam Smart Solution Co., Ltd.</p>
+          <p class="job-location">📍 สาทร, กรุงเทพฯ</p>
+          <p class="job-desc">วิเคราะห์ Workflow และนำ No-Code/Low-Code AI Automation มาปรับกระบวนการธุรกิจให้มีประสิทธิภาพสูงสุด</p>
+          <div class="job-skills">
+            <span class="skill-tag">Zapier / Make</span>
+            <span class="skill-tag">Power BI</span>
+            <span class="skill-tag">Generative AI</span>
+            <span class="skill-tag">PDPA</span>
+          </div>
+          <div class="job-footer">
+            <span class="job-salary">💰 30,000 – 50,000 บาท/เดือน</span>
+            <a href="#register" class="btn-apply">สมัครงาน</a>
+          </div>
+        </div>
+
+        <!-- Job 3 -->
+        <div class="job-card reveal" data-category="data">
+          <div class="job-header">
+            <div class="company-logo logo-dp">DP</div>
+            <div class="job-meta">
+              <span class="job-date">1 ก.ย. 2568</span>
+              <span class="job-tag urgent">Urgent ⚡</span>
+            </div>
+          </div>
+          <button type="button" class="job-title-btn" data-job="job3">
+            <h3 class="job-title">AI Data Analyst &amp; Insight Specialist</h3>
+          </button>
+          <p class="job-company">DataPulse Analytics Co., Ltd.</p>
+          <p class="job-location">📍 อโศก, กรุงเทพฯ (BTS อโศก)</p>
+          <p class="job-desc">วิเคราะห์ข้อมูลขนาดใหญ่ด้วย AI Models สร้าง Dashboard และนำเสนอ Insight เชิงธุรกิจแก่ผู้บริหาร</p>
+          <div class="job-skills">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Tableau</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Machine Learning</span>
+          </div>
+          <div class="job-footer">
+            <span class="job-salary">💰 45,000 – 80,000 บาท/เดือน</span>
+            <a href="#register" class="btn-apply">สมัครงาน</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="jobs-cta">
+        <a href="courses.html" class="btn btn-outline">พัฒนาทักษะก่อนสมัคร →</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ===== REGISTER FORM ===== -->
+  <section class="register-section" id="register">
+    <div class="container">
+      <div class="register-wrapper">
+        <div class="register-info">
+          <span class="section-tag">Talent Registration</span>
+          <h2>ลงทะเบียน<br/><span class="gradient-text">AI Skill Profiling</span></h2>
+          <p>กรอกข้อมูลเพื่อรับการประเมินทักษะ AI และเชื่อมต่อกับบริษัทที่ใช่สำหรับคุณ</p>
+          <ul class="register-benefits">
+            <li><span class="check">✓</span> ประเมิน AI Skill Tier ฟรี</li>
+            <li><span class="check">✓</span> แนะนำตำแหน่งงานที่เหมาะสม</li>
+            <li><span class="check">✓</span> รับส่วนลดหลักสูตรพิเศษ</li>
+            <li><span class="check">✓</span> อัปเดตข่าวสารงาน AI ล่าสุด</li>
+          </ul>
+        </div>
+        <div class="register-form-box">
+          <form id="registerForm" class="register-form" novalidate>
+            <div class="form-row">
+              <div class="form-group form-group-sm">
+                <label for="prefix">คำนำหน้า *</label>
+                <select id="prefix" name="prefix" required>
+                  <option value="">เลือก</option>
+                  <option value="นาย">นาย</option>
+                  <option value="นาง">นาง</option>
+                  <option value="นางสาว">นางสาว</option>
+                </select>
+                <span class="error-msg" id="err-prefix"></span>
+              </div>
+              <div class="form-group form-group-wide">
+                <label for="fullname">ชื่อ-นามสกุล *</label>
+                <input type="text" id="fullname" name="fullname" placeholder="ชื่อ นามสกุล" required />
+                <span class="error-msg" id="err-fullname"></span>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">เบอร์โทรศัพท์ *</label>
+                <input type="tel" id="phone" name="phone" placeholder="0xx-xxx-xxxx" required />
+                <span class="error-msg" id="err-phone"></span>
+              </div>
+              <div class="form-group">
+                <label for="email">อีเมล *</label>
+                <input type="email" id="email" name="email" placeholder="example@email.com" required />
+                <span class="error-msg" id="err-email"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="address">ที่อยู่</label>
+              <input type="text" id="address" name="address" placeholder="ที่อยู่ปัจจุบัน" />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="education">ระดับการศึกษา *</label>
+                <select id="education" name="education" required>
+                  <option value="">เลือกระดับการศึกษา</option>
+                  <option value="มัธยมศึกษา">มัธยมศึกษา / ปวช.</option>
+                  <option value="อนุปริญญา">อนุปริญญา / ปวส.</option>
+                  <option value="ปริญญาตรี">ปริญญาตรี</option>
+                  <option value="ปริญญาโท">ปริญญาโท</option>
+                  <option value="ปริญญาเอก">ปริญญาเอก</option>
+                </select>
+                <span class="error-msg" id="err-education"></span>
+              </div>
+              <div class="form-group">
+                <label for="position">ตำแหน่งที่ต้องการสมัคร *</label>
+                <select id="position" name="position" required>
+                  <option value="">เลือกตำแหน่ง</option>
+                  <option value="ai-web-dev">AI-Assisted Web Developer</option>
+                  <option value="ai-transform">Digital &amp; AI Transformation Associate</option>
+                  <option value="ai-analyst">AI Data Analyst &amp; Insight Specialist</option>
+                </select>
+                <span class="error-msg" id="err-position"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>ระดับสมรรถนะ AI (AI Skill Tier) *</label>
+              <div class="tier-radios">
+                <label class="radio-card">
+                  <input type="radio" name="tier" value="Beginner" required />
+                  <span class="radio-content">
+                    <span class="radio-icon">🌱</span>
+                    <span class="radio-label">Beginner</span>
+                    <span class="radio-sub">ระดับเริ่มต้น</span>
+                  </span>
+                </label>
+                <label class="radio-card">
+                  <input type="radio" name="tier" value="Pioneer" />
+                  <span class="radio-content">
+                    <span class="radio-icon">🚀</span>
+                    <span class="radio-label">Pioneer</span>
+                    <span class="radio-sub">ระดับผู้บุกเบิก</span>
+                  </span>
+                </label>
+                <label class="radio-card">
+                  <input type="radio" name="tier" value="Innovator" />
+                  <span class="radio-content">
+                    <span class="radio-icon">💡</span>
+                    <span class="radio-label">Innovator</span>
+                    <span class="radio-sub">ระดับผู้สร้างสรรค์</span>
+                  </span>
+                </label>
+              </div>
+              <span class="error-msg" id="err-tier"></span>
+            </div>
+            <div class="form-group">
+              <label class="checkbox-label">
+                <input type="checkbox" id="pdpa" name="pdpa" required />
+                <span class="checkbox-custom"></span>
+                <span class="checkbox-text">
+                  ข้าพเจ้ายินยอมให้ NexTalent AI เก็บรวบรวมและประมวลผลข้อมูลส่วนบุคคลของข้าพเจ้า
+                  ตาม <a href="#" class="link-inline">นโยบายความเป็นส่วนตัว</a> และ
+                  พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล (PDPA) พ.ศ. 2562 *
+                </span>
+              </label>
+              <span class="error-msg" id="err-pdpa"></span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <span>ส่งใบสมัคร</span>
+              <span class="btn-arrow">→</span>
+            </button>
+          </form>
+          <div class="form-success" id="formSuccess" style="display:none;">
+            <div class="success-icon">✓</div>
+            <h3>ลงทะเบียนสำเร็จ!</h3>
+            <p>เราได้รับข้อมูลของคุณแล้ว ทีมงานจะติดต่อกลับภายใน 3 วันทำการ</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <img src="images/logo.svg" alt="NexTalent AI Logo" class="logo-img" />
+          </a>
+          <p>แพลตฟอร์มพัฒนาทักษะและสรรหาบุคลากร AI &amp; Digital สำหรับตลาดแรงงานยุคใหม่</p>
+        </div>
+        <div class="footer-links">
+          <h4>เมนูหลัก</h4>
+          <ul>
+            <li><a href="index.html">หน้าหลัก</a></li>
+            <li><a href="#jobs">ตำแหน่งงาน</a></li>
+            <li><a href="courses.html">หลักสูตรอบรม</a></li>
+            <li><a href="about.html">เกี่ยวกับเรา</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>ติดต่อ</h4>
+          <ul>
+            <li>📍 9/1 ม.5 ต.คลองหนึ่ง อ.คลองหลวง จ.ปทุมธานี 12120</li>
+            <li class="contact-copy" data-copy="0999024265" title="คลิกเพื่อคัดลอก">📞 0999024265</li>
+            <li class="contact-copy" data-copy="nattharika.boon@bu.ac.th" title="คลิกเพื่อคัดลอก">✉️ nattharika.boon@bu.ac.th</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 NexTalent AI. All rights reserved. | พัฒนาโดยนักศึกษา มหาวิทยาลัยกรุงเทพ</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== JOB DETAIL MODAL ===== -->
+  <div class="job-modal-overlay" id="jobModalOverlay">
+    <div class="job-modal" role="dialog" aria-modal="true" aria-labelledby="jobModalTitle">
+      <button type="button" class="job-modal-close" id="jobModalClose" aria-label="ปิด">✕</button>
+      <div class="job-modal-header">
+        <div class="company-logo" id="jobModalLogo"></div>
+        <div class="job-modal-title">
+          <h3 id="jobModalTitle"></h3>
+          <p id="jobModalCompany"></p>
+        </div>
+      </div>
+      <div class="job-modal-tags" id="jobModalTags"></div>
+      <div class="job-modal-meta-grid">
+        <div class="job-modal-meta-item">
+          <span class="meta-label">📍 สถานที่</span>
+          <span class="meta-value" id="jobModalLocation"></span>
+        </div>
+        <div class="job-modal-meta-item">
+          <span class="meta-label">💰 เงินเดือน</span>
+          <span class="meta-value" id="jobModalSalary"></span>
+        </div>
+      </div>
+      <div class="job-modal-section">
+        <h4>📋 รายละเอียดงาน</h4>
+        <p id="jobModalDesc"></p>
+      </div>
+      <div class="job-modal-section">
+        <h4>✅ คุณสมบัติที่ต้องการ</h4>
+        <ul class="job-modal-list" id="jobModalRequirements"></ul>
+      </div>
+      <div class="job-modal-section">
+        <h4>🎁 สวัสดิการ</h4>
+        <ul class="job-modal-list" id="jobModalBenefits"></ul>
+      </div>
+      <div class="job-modal-footer">
+        <button type="button" class="btn btn-outline" id="jobModalCloseBtn">ปิด</button>
+        <a href="#register" class="btn btn-primary" id="jobModalApply">สมัครงาน →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== BACK TO TOP + TOAST ===== -->
+  <button type="button" class="back-to-top" id="backToTop" aria-label="กลับขึ้นด้านบน">↑</button>
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/validation.js"></script>
+
+  <!-- ===== AI SKILL ASSESSMENT MODAL ===== -->
+<div class="assessment-overlay" id="assessmentOverlay">
+  <div class="assessment-modal">
+
+    <button
+      type="button"
+      class="modal-close"
+      id="assessmentClose"
+      aria-label="ปิด">
+      &times;
+    </button>
+
+    <span class="section-tag">AI Skill Assessment</span>
+
+    <h2>ระดับความสามารถของคุณอยู่ในระดับไหน?</h2>
+
+    <p id="assessmentQuestion"></p>
+
+    <div id="assessmentOptions"></div>
+
+    <div class="assessment-footer">
+      <span id="assessmentProgress">
+        คำถาม 1 / 5
+      </span>
+
+      <button
+        type="button"
+        class="btn-primary"
+        id="nextQuestion">
+        ถัดไป →
+      </button>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
