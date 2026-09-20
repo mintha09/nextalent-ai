@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230 60" width="230" height="60">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Hexagon Icon -->
+  <g filter="url(#glow)">
+    <polygon
+      points="30,4 52,16 52,44 30,56 8,44 8,16"
+      fill="none"
+      stroke="url(#grad1)"
+      stroke-width="2"
+      opacity="0.45"
+    />
+    <polygon
+      points="30,12 46,21 46,39 30,48 14,39 14,21"
+      fill="url(#grad1)"
+      opacity="0.12"
+    />
+    <polygon
+      points="30,12 46,21 46,39 30,48 14,39 14,21"
+      fill="none"
+      stroke="url(#grad1)"
+      stroke-width="1.5"
+    />
+    <text
+      x="30" y="36"
+      text-anchor="middle"
+      font-family="Inter, Arial, sans-serif"
+      font-weight="900"
+      font-size="15"
+      fill="url(#grad1)"
+    >AI</text>
+  </g>
+
+  <!-- NexTalent text — font-size 22 ให้สั้นลงนิด จะได้ไม่ชนกับ badge -->
+  <text
+    x="64" y="37"
+    font-family="Inter, Arial, sans-serif"
+    font-weight="800"
+    font-size="22"
+    fill="#f1f5f9"
+    letter-spacing="-0.5"
+  >NexTalent</text>
+
+  <!-- AI badge อยู่หลัง t ตัวสุดท้าย มี gap ชัดเจน -->
+  <rect x="188" y="10" width="28" height="16" rx="4" fill="url(#grad1)" opacity="0.9"/>
+  <text
+    x="202" y="22"
+    text-anchor="middle"
+    font-family="Inter, Arial, sans-serif"
+    font-weight="800"
+    font-size="10"
+    fill="#ffffff"
+    letter-spacing="0.5"
+  >AI</text>
+
+</svg>
