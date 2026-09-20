@@ -744,12 +744,21 @@ window.addEventListener('load', () => {
    ══════════════════════════════════════════════════════════ */
 (function () {
   const customCursor = document.getElementById('customCursor');
-  const isTouch =
-  window.matchMedia('(pointer: coarse)').matches ||
-  navigator.maxTouchPoints > 0;
-  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  if (!customCursor || isTouch || reducedMotion) return;
+  const isTouch =
+    window.matchMedia('(pointer: coarse)').matches ||
+    navigator.maxTouchPoints > 0 ||
+    'ontouchstart' in window;
+
+  const reducedMotion =
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!customCursor || isTouch || reducedMotion) {
+    if (customCursor) {
+      customCursor.style.display = 'none';
+    }
+    return;
+  }
 
   document.body.classList.add('custom-cursor-active');
 
