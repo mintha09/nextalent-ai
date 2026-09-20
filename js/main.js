@@ -744,7 +744,9 @@ window.addEventListener('load', () => {
    ══════════════════════════════════════════════════════════ */
 (function () {
   const customCursor = document.getElementById('customCursor');
-  const isTouch = window.matchMedia('(pointer: coarse)').matches;
+  const isTouch =
+  window.matchMedia('(pointer: coarse)').matches ||
+  navigator.maxTouchPoints > 0;
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   if (!customCursor || isTouch || reducedMotion) return;
